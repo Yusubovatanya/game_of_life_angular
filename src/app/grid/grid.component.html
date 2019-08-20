@@ -1,0 +1,52 @@
+<div class="container">
+  <table>
+    <tr *ngFor="let i of range">
+      <td *ngFor="let j of range" (click)="choseElement($event)" [ngClass]="{'alive': mas[i][j]}" ></td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="container">
+  <table>
+    <tr *ngFor="let i of range; even as evr">
+      <td
+        *ngFor="let j of range; even as evd"
+      [ngClass]="{'alive': evr === evd}" 
+      ></td>
+    </tr>
+  </table>
+</div> -->
+
+<!-- <div class="container">
+  <table>
+    <tr *ngFor="let i of range; even as evr; odd as oddr">
+      <td
+        *ngFor="let j of range; even as evd; odd as oddd"
+      [ngClass]="{'alive': evr === evd || oddr === oddd}" 
+      ></td>
+    </tr>
+  </table>
+</div> -->
+
+
+
+<!-- <div class="container">
+  <table>
+    <tr *ngFor="let i of range; even as evr; odd as oddr">
+      <td
+        *ngFor="let j of range; even as evd; odd as oddd"
+      [ngClass]="{'alive': oddr === oddd}" 
+      ></td>
+    </tr>
+  </table>
+</div> -->

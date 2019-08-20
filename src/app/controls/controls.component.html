@@ -1,0 +1,16 @@
+<div class="button-container">
+  <button mat-stroked-button color="primary" *ngIf="isPlay;else pause" (click)="play($event)" matTooltip="Play" TooltipPosition='below'><i
+      class="fas fa-play"></i></button>
+  <ng-template #pause>
+    <button mat-stroked-button color="primary" (click)="play($event)" matTooltip="Pause" TooltipPosition='below'>
+      <i class="fas fa-pause-circle"></i>
+    </button>
+  </ng-template>
+  <button mat-stroked-button color="accent" (click)="reset($event)" matTooltip="Reset" TooltipPosition='below'><i
+      class="fas fa-reply"></i></button>
+  <button mat-stroked-button color="primary" (click)="random($event)" matTooltip="Random" TooltipPosition='below'><i
+      class="fas fa-random"></i></button>
+  <mat-slider class="example-margin" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel"
+    (change)="getSpeed($event)"></mat-slider>
+</div>
+<!-- [(ngModel)]="valueSpeed" -->
